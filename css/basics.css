@@ -1,0 +1,4 @@
+/* I use this on containers that hold blog posts, etc. It keeps content from overflowing the page */
+.postcontain {
+  word-break: break-word;
+}
