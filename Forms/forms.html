@@ -1,3 +1,25 @@
 <!-- Form inputs to pass through Item ID's -->
 <input type="hidden" name="Item ID" value="YOURCOLLECTIONINFOHERE" />
 <input type="hidden" name="Item Name" value="YOURCOLLECTIONINFOHERE" />
+
+<!-- Make sure an input for a URL has https:// so it'll validate in Webflow and be uniform in automations -->
+<input
+  class="input w-input"
+  type="url"
+  name="businessSite"
+  data-name="Business Website"
+  onblur="fixUrl(this)"
+  placeholder="www.yourwebsitehere.com"
+/>
+<script>
+  function fixUrl(ref) {
+    if (
+      ref.value &&
+      !ref.value.startsWith("https://") &&
+      !ref.value.startsWith("http://")
+    ) {
+      ref.value = "https://" + ref.value;
+      return;
+    }
+  }
+</script>
