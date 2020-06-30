@@ -3,8 +3,8 @@ function tweetArticle() {
     const author = "AUTHORPILL";
     const article = "ARTICLENAMEPILL";
     const slug = "SLUGPILL";
-    const fullUrl = "https://somedomain.com/post/" + slug;
-    const tweetCopy = `Hey! I just read this great article by + ${author}! Check it out here!`;
+    const fullUrl = `https://somedomain.com/post/${slug}`;
+    const tweetCopy = `Hey! I just read this great article by ${author}! Check it out here!`;
     const copyUnescaped = tweetCopy.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/, "'");
     window.open('http://twitter.com/share?url=' + encodeURIComponent(fullUrl) + '&text=' + encodeURIComponent(copyUnescaped).replace(/'/g, "%27"))}
 
