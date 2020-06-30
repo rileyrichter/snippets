@@ -5,7 +5,7 @@ Webflow.push(function() {
       setTimeout(function() { location.reload(true); }, 2000);
     });
   });
-  
+
   // Pass form input values through to the success state of the form
   $('#submitButtonId').click(function() {
     let firstName = $('#firstNameField').val();
@@ -14,3 +14,19 @@ Webflow.push(function() {
     $('#lastNameResult').html(lastName);
 });
 
+// Mask a phone number
+$(document).ready(function() {
+    $("#phone").mask("999-999-9999", {
+        placeholder: "XXX-XXX-XXXX"
+    });
+});
+
+// This adds all input values as local storage items
+$('#submitButton').on('click', function(){
+    $('input[type="text"]').each(function(){    
+        var id = $(this).attr('id');
+        var value = $(this).val();
+       localStorage.setItem(id, value);
+  
+    });   
+  });
