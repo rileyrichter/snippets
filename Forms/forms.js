@@ -5,7 +5,7 @@ Webflow.push(function() {
       setTimeout(function() { location.reload(true); }, 2000);
     });
   });
-
+  
   // Pass form input values through to the success state of the form
   $('#submitButtonId').click(function() {
     let firstName = $('#firstNameField').val();
@@ -13,3 +13,4 @@ Webflow.push(function() {
     $('#firstNameResult').html(firstName);
     $('#lastNameResult').html(lastName);
 });
+
