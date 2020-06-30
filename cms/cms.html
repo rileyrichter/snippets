@@ -1,0 +1,43 @@
+<!-- Rapper Radio setup, but would work with any CMS where you wanted to share the item with a Twitter handle defined in the CMS -->
+<a
+  class="tweet-button-stations w-button"
+  id="sharethis"
+  href="#"
+  target="_blank"
+  title="Tweet"
+  onclick="tweetRad('STATIONHANDLE'); return false;"
+  >Tweet to STATTIONPILL!</a
+>
+<script>
+  // Rapper Radio Setup where you share an item when passing through a parameter
+  function tweetRad(twitterhandle) {
+    var rrartistmaster = "ARTISTPILL";
+    var rrsongmaster = "SONGNAMEPILL";
+    var rrslugmaster = "SLUGPILL";
+    var radurl = "https://rapperradio.com/song/" + rrslugmaster;
+    var rad =
+      "Hey, " +
+      twitterhandle +
+      "! I want to hear " +
+      rrartistmaster +
+      "'s " +
+      rrsongmaster +
+      " on air!";
+    var radunescaped = rad
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/, "'");
+    window.open(
+      "http://twitter.com/share?url=" +
+        encodeURIComponent(radurl) +
+        "&text=" +
+        encodeURIComponent(radunescaped).replace(/'/g, "%27")
+    );
+    $.post("https://breaksocial.herokuapp.com/req", {
+      itemId: "ITEMID",
+      verificationToken: "XXXXXXXXXXXXXXXXX",
+    });
+  }
+</script>

@@ -5,7 +5,7 @@ $(document).on('submit', 'form', function() {
 });
 
   // Pass form input values through to the success state of the form
-  $('#submitButtonId').click(function() {
+$('#submitButtonId').click(function() {
     let firstName = $('#firstNameField').val();
     let lastName = $('#lastNameField').val();
     $('#firstNameResult').html(firstName);
@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
 });
 
-// This adds all input values as local storage items
+// This adds all input values that are text as local storage items
 $('#submitButton').on('click', function(){
     $('input[type="text"]').each(function(){    
         var id = $(this).attr('id');
@@ -28,3 +28,13 @@ $('#submitButton').on('click', function(){
   
     });   
   });
+
+  // This adds all input values as local storage items
+$('#submitButton').on('click', function(){
+  $('input').each(function(){    
+      var id = $(this).attr('id');
+      var value = $(this).val();
+     localStorage.setItem(id, value);
+
+  });   
+});
