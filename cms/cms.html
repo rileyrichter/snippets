@@ -11,11 +11,11 @@
 <script>
   // Rapper Radio Setup where you share an item when passing through a parameter
   function tweetRad(twitterhandle) {
-    var rrartistmaster = "ARTISTPILL";
-    var rrsongmaster = "SONGNAMEPILL";
-    var rrslugmaster = "SLUGPILL";
-    var radurl = "https://rapperradio.com/song/" + rrslugmaster;
-    var rad =
+    const rrartistmaster = "ARTISTPILL";
+    const rrsongmaster = "SONGNAMEPILL";
+    const rrslugmaster = "SLUGPILL";
+    const radurl = "https://rapperradio.com/song/" + rrslugmaster;
+    const rad =
       "Hey, " +
       twitterhandle +
       "! I want to hear " +
@@ -23,7 +23,7 @@
       "'s " +
       rrsongmaster +
       " on air!";
-    var radunescaped = rad
+    const radunescaped = rad
       .replace(/&amp;/g, "&")
       .replace(/&lt;/g, "<")
       .replace(/&gt;/g, ">")

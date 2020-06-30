@@ -22,8 +22,8 @@ $(document).ready(function() {
 // This adds all input values that are text as local storage items
 $('#submitButton').on('click', function(){
     $('input[type="text"]').each(function(){    
-        var id = $(this).attr('id');
-        var value = $(this).val();
+        let id = $(this).attr('id');
+        let value = $(this).val();
        localStorage.setItem(id, value);
   
     });   
@@ -32,8 +32,8 @@ $('#submitButton').on('click', function(){
   // This adds all input values as local storage items
 $('#submitButton').on('click', function(){
   $('input').each(function(){    
-      var id = $(this).attr('id');
-      var value = $(this).val();
+      let id = $(this).attr('id');
+      let value = $(this).val();
      localStorage.setItem(id, value);
 
   });   

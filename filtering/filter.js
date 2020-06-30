@@ -1,7 +1,7 @@
 // Filter through items
 $(document).ready(function(){
     $("#wrapperid").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
+      let value = $(this).val().toLowerCase();
       $(".classToFilter").filter(function() {
         $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
