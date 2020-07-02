@@ -1,3 +1,5 @@
+// All of this code is copied from the Memberstack API Sandbox in their docs at https://docs.memberstack.com/
+
 // Add your API key here.
 const API_KEY = "...";
 const FREE_PLAN_ID = "...";
