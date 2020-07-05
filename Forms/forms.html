@@ -23,3 +23,40 @@
     }
   }
 </script>
+
+<!-- Allow a user to vote for an item, then hide the vote button from that user -->
+<div id="SHORTCODEPILLCMS">
+  <input
+    type="submit"
+    value="Vote"
+    data-wait="..."
+    onClick="myVote('SHORTCODEPILLCMS');"
+    class="button vote-button w-button"
+    style="cursor: pointer;"
+  />
+  <input type="hidden" name="name" value="ITEMNAMEPILL" />
+  <input type="hidden" name="itemid" value="ITEMNAMEID" />
+</div>
+<!-- When the user votes, set the item in local storage as "True" -->
+<script>
+  function myVote(shortcode) {
+    $(document).on("submit", "form", function () {
+      // Set product in local storage
+      localStorage.setItem(shortcode, "true");
+      // Refresh page after 3000 milliseconds
+      setTimeout(function () {
+        location.reload(true);
+      }, 3000);
+    });
+  }
+</script>
+<!-- Loop through items on the page, if the item is found it local storage, hide the corresponding element with ID. If none fount on page, console log -->
+<script>
+  for (let i = 0; i < localStorage.length; i++) {
+    if (document.getElementById(localStorage.key(i)) === null) {
+      console.log("not on this page");
+    } else {
+      document.getElementById(localStorage.key(i)).style.display = "none";
+    }
+  }
+</script>

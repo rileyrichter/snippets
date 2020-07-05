@@ -38,3 +38,20 @@ $('#submitButton').on('click', function(){
 
   });   
 });
+
+// When a person upvotes a product, use a unique ID and set it to true in local storage 
+function myVote(shortcode) {
+  $(document).on('submit', 'form', function() {
+  // Set product in local storage 
+	localStorage.setItem(shortcode, "true");
+   // Refresh page after 3000 milliseconds
+   setTimeout(function() { location.reload(true); }, 3000);
+  });
+};
+
+// If an item has been set in local storage, then hide an element from the user
+for(let i=0; i<localStorage.length; i++) {
+	if (document.getElementById(localStorage.key(i)) === null) {
+  console.log("not on this page");}
+	else {document.getElementById(localStorage.key(i)).style.display = "none";}
+}
