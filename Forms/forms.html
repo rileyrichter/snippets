@@ -50,7 +50,7 @@
     });
   }
 </script>
-<!-- Loop through items on the page, if the item is found it local storage, hide the corresponding element with ID. If none fount on page, console log -->
+<!-- Loop through items on the page, if the item is found in local storage, hide the corresponding element with ID. If none found on page, console log -->
 <script>
   for (let i = 0; i < localStorage.length; i++) {
     if (document.getElementById(localStorage.key(i)) === null) {
