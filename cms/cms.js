@@ -23,3 +23,28 @@ function tweetRad(twitterhandle) {
       verificationToken: "XXXXXXXXXXXXXXXXX"
     });
 } 
+
+// Add the current selector a menu item if in a specific directory/directories
+
+$(document).ready(function() {
+  if (window.location.href.indexOf("category") > -1) {
+  setTimeout(function(){
+    let myLink = document.getElementById('on-demand');
+    myLink.className += (" w--current");
+    }, 100);
+} 
+  if (window.location.href.indexOf("breakout-sessions") > -1) {
+  setTimeout(function(){
+    let myLink = document.getElementById('on-demand');
+    myLink.className += (" w--current");
+    }, 100);
+} 	
+if (window.location.href.indexOf("tags") > -1) {
+  setTimeout(function(){
+    let myLink = document.getElementById('on-demand');
+    myLink.className += (" w--current");
+    }, 100);
+  } 	else {
+  console.log(`ready`);
+}
+});
