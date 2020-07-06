@@ -25,7 +25,6 @@ function tweetRad(twitterhandle) {
 } 
 
 // Add the current selector a menu item if in a specific directory/directories
-
 $(document).ready(function() {
   if (window.location.href.indexOf("category") > -1) {
   setTimeout(function(){
