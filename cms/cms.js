@@ -47,3 +47,5 @@ if (window.location.href.indexOf("tags") > -1) {
   console.log(`ready`);
 }
 });
+
+// Adding more here soon!
