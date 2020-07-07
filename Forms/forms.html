@@ -3,14 +3,8 @@
 <input type="hidden" name="Item Name" value="YOURCOLLECTIONINFOHERE" />
 
 <!-- Make sure an input for a URL has https:// so it'll validate in Webflow CMS and be uniform in automations -->
-<input
-  class="input w-input"
-  type="url"
-  name="businessSite"
-  data-name="Business Website"
-  onblur="fixUrl(this)"
-  placeholder="www.yourwebsitehere.com"
-/>
+<input class="input w-input" type="url" name="businessSite" data-name="Business Website" onblur="fixUrl(this)"
+  placeholder="www.yourwebsitehere.com" />
 <script>
   function fixUrl(ref) {
     if (
@@ -26,14 +20,8 @@
 
 <!-- Allow a user to vote for an item, then hide the vote button from that user -->
 <div id="SHORTCODEPILLCMS">
-  <input
-    type="submit"
-    value="Vote"
-    data-wait="..."
-    onClick="myVote('SHORTCODEPILLCMS');"
-    class="button vote-button w-button"
-    style="cursor: pointer;"
-  />
+  <input type="submit" value="Vote" data-wait="..." onClick="myVote('SHORTCODEPILLCMS');"
+    class="button vote-button w-button" style="cursor: pointer;" />
   <input type="hidden" name="name" value="ITEMNAMEPILL" />
   <input type="hidden" name="itemid" value="ITEMNAMEID" />
 </div>
@@ -57,6 +45,19 @@
       console.log("not on this page");
     } else {
       document.getElementById(localStorage.key(i)).style.display = "none";
+    }
+  }
+</script>
+
+<!-- Don't validate form unless the budget is greater than 1000 -->
+<input type="number" min="1000" class="w-input" name="number" value="" oninput="check(this)" />
+<script>
+  function check(input) {
+    if (input.value <= 1000) {
+      input.setCustomValidity('The budget for this project is too low!');
+    } else {
+      // input is fine -- reset the error message
+      input.setCustomValidity('');
     }
   }
 </script>
