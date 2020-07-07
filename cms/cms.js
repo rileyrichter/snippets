@@ -8,7 +8,7 @@ function tweetArticle() {
     const copyUnescaped = tweetCopy.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/, "'");
     window.open('http://twitter.com/share?url=' + encodeURIComponent(fullUrl) + '&text=' + encodeURIComponent(copyUnescaped).replace(/'/g, "%27"))}
 
-// Rapper Radio Setup where you share an item when passing through a parameter
+// Setup where you share an item when passing through a parameter
 function tweetRad(twitterhandle) {
     const rrartistmaster = "ARTISTPILL";
     const rrsongmaster = "SONGNAMEPILL";
