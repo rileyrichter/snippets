@@ -4,6 +4,12 @@ $(document).on('submit', 'form', function() {
   setTimeout(function() { location.reload(true); }, 2000);
 });
 
+// Clear local storage on submit
+
+$(document).on('submit', 'form', function() {
+  localStorage.clear();
+});
+
   // Pass form input values through to the success state of the form
 $('#submitButtonId').click(function() {
     let firstName = $('#firstNameField').val();
