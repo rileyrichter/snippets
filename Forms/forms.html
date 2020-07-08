@@ -53,7 +53,7 @@
 <input type="number" min="1000" class="w-input" name="number" value="" oninput="check(this)" />
 <script>
   function check(input) {
-    if (input.value <= 1000) {
+    if (input.value <= 999) {
       input.setCustomValidity('The budget for this project is too low!');
     } else {
       // input is fine -- reset the error message
