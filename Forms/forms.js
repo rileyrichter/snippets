@@ -70,10 +70,31 @@ $(document).ready(function() {
       var text_length = $('#title').val().length;
       var text_remaining = text_max - text_length;
       $('#title_feedback').html(text_remaining);
-        if (text_remaining <= 40) {
-          document.getElementById('charbox').style.backgroundColor = "#ff6382";
-        } else {
-          document.getElementById('charbox').style.backgroundColor = "#38d996";
-        }
+      let backgroundColor = "#38d996";
+      if (text_remaining === 0) {
+  backgroundColor = "#ff6382";
+      } else if (text_remaining <= 40) {
+       backgroundColor = "#ffab9d";
+}
+document.getElementById('charbox').style.backgroundColor = backgroundColor;
   });
 });
+
+
+
+if (text_remaining === 0) {
+  document.getElementById('charbox').style.backgroundColor = "#ff6382";
+} else if (text_remaining <= 40) {
+   document.getElementById('charbox').style.backgroundColor = "#ffab9d";
+} else {
+   document.getElementById('charbox').style.backgroundColor = "#38d996";
+}
+
+
+let backgroundColor = "#38d996";
+if (text_remaining === 0) {
+  backgroundColor = "#ff6382";
+} else if (text_remaining <= 40) {
+  backgroundColor = "#ffab9d";
+}
+document.getElementById('charbox').style.backgroundColor = backgroundColor;
