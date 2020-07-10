@@ -2,3 +2,10 @@
 .postcontain {
   word-break: break-word;
 }
+/* I use to keep description text uniform */
+.keynote-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

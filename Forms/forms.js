@@ -61,3 +61,19 @@ for(let i=0; i<localStorage.length; i++) {
   console.log("not on this page");}
 	else {document.getElementById(localStorage.key(i)).style.display = "none";}
 }
+
+// Show the number of characters remaining
+$(document).ready(function() {
+  var text_max = 140;
+  $('#title_feedback').html(text_max);
+  $('#title').keyup(function() {
+      var text_length = $('#title').val().length;
+      var text_remaining = text_max - text_length;
+      $('#title_feedback').html(text_remaining);
+        if (text_remaining <= 40) {
+          document.getElementById('charbox').style.backgroundColor = "#ff6382";
+        } else {
+          document.getElementById('charbox').style.backgroundColor = "#38d996";
+        }
+  });
+});
