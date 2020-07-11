@@ -100,6 +100,7 @@ $('#idea').keyup(function() {
     $('#charcount').html(charCount);
 });
 
+// Show the number of words in an input
 // Set the input with the id of #idea as a variable
 let countTarget = document.querySelector("#idea");
 // Set the element with an id of #word-cout as wordCount
