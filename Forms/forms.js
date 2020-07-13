@@ -131,3 +131,13 @@ window.addEventListener(
   },
   false
 );
+
+// Redirect the user based on the radio selection
+$('#submitButton').on('click', function(){
+  let value = $('input[name=myRadio]:checked').val();
+  if (value == 'visual-dev') {
+      window.location.assign("https://www.visualdev.fm");
+  } else if (value == 'google') {
+      window.location.assign("https://www.google.com");
+  } 
+});
