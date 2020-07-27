@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
+    $('.firstlist').owlCarousel({
           loop: true,
           margin: 30,
           autoplayHoverPause: true
