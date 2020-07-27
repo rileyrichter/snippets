@@ -1,3 +1,4 @@
+// We'll need to init 6 lists and also add custom styling via CSS to the nav
 $(document).ready(function(){
     $('.firstlist').owlCarousel({
           loop: true,
@@ -12,6 +13,7 @@ $(document).ready(function(){
     },
   );
 });
+// We'll lose this since we'll be using the native nav items from Owl
 $('.slider-nav-left').on('click', function() {
     setTimeout(function() {
       $('.owl-prev').triggerHandler('click');
