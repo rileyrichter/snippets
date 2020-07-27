@@ -5,9 +5,8 @@ $(document).ready(function(){
           autoplayHoverPause: true
       },
     );
-    $('.full-width').owlCarousel({
+    $('.testing').owlCarousel({
         loop: true,
-        margin: 30,
         autoplayHoverPause: true,
         items: 1
     },
