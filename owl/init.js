@@ -5,6 +5,13 @@ $(document).ready(function(){
           autoplayHoverPause: true
       },
     );
+    $('.full-width').owlCarousel({
+        loop: true,
+        margin: 30,
+        autoplayHoverPause: true,
+        items: 1
+    },
+  );
 });
 $('.slider-nav-left').on('click', function() {
     setTimeout(function() {
