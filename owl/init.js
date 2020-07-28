@@ -27,6 +27,7 @@ $(document).ready(function(){
     $('.testing').owlCarousel({
         loop: true,
         autoplayHoverPause: true,
+        items: 1
     },
   );
 });
