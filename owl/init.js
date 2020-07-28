@@ -3,13 +3,30 @@ $(document).ready(function(){
     $('.firstlist').owlCarousel({
           loop: true,
           margin: 30,
-          autoplayHoverPause: true
+          autoplayHoverPause: true,
+          responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items: 1
+            },
+            // breakpoint from 480 up
+            478 : {
+                items: 2
+            },
+            // breakpoint from 768 up
+            767 : {
+                items: 3
+            },
+            // breakpoint from 991 up
+            991: {
+              items: 4
+            }
+        }
       },
     );
     $('.testing').owlCarousel({
         loop: true,
         autoplayHoverPause: true,
-        items: 1
     },
   );
 });
