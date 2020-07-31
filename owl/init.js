@@ -42,3 +42,4 @@ $('.slider-nav-left').on('click', function() {
         $('.owl-next').triggerHandler('click');
   })
 })
+
