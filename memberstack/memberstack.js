@@ -41,7 +41,7 @@ console.log("✨ Uncomment methods to start interacting with the API!");
 
 async function getMembers() {
   const res = await fetch("https://api.memberstack.com/v1/members", {
-    headers: { "X-API-KEY": API_KEY }
+    headers: { "X-API-KEY": API_KEY },
   });
 
   const getMembersResponse = await res.json();
@@ -53,7 +53,7 @@ async function getMember() {
   const res = await fetch(
     `https://api.memberstack.com/v1/members/${USER_ID_TO_FETCH}`,
     {
-      headers: { "X-API-KEY": API_KEY }
+      headers: { "X-API-KEY": API_KEY },
     }
   );
 
@@ -67,13 +67,13 @@ async function addMember() {
     method: "POST",
     headers: {
       "X-API-KEY": API_KEY,
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       email: "...",
       password: "...",
-      plan: FREE_PLAN_ID
-    })
+      plan: FREE_PLAN_ID,
+    }),
   });
 
   const addMemberResponse = await res.json();
@@ -87,7 +87,7 @@ async function updateMember() {
     {
       method: "POST",
       headers: { "X-API-KEY": API_KEY },
-      body: { email: "..." }
+      body: { email: "..." },
     }
   );
 
@@ -101,7 +101,7 @@ async function deleteMember() {
     `https://api.memberstack.com/v1/members/${USER_ID_TO_DELETE}`,
     {
       method: "DELETE",
-      headers: { "X-API-KEY": API_KEY }
+      headers: { "X-API-KEY": API_KEY },
     }
   );
 
