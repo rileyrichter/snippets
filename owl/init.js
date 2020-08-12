@@ -1,6 +1,6 @@
 // We'll need to init 6 lists and also add custom styling via CSS to the nav
 $(document).ready(function () {
-  $(".firstlist").owlCarousel({
+  $(".feature").owlCarousel({
     loop: true,
     margin: 30,
     autoplayHoverPause: true,
@@ -23,7 +23,7 @@ $(document).ready(function () {
       },
     },
   });
-  $(".testing").owlCarousel({
+  $(".recent").owlCarousel({
     loop: true,
     autoplayHoverPause: true,
     items: 1,
