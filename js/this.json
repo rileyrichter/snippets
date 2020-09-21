@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "deck_id": "nwu7589ziqef",
+  "cards": [
+    {
+      "code": "2D",
+      "image": "https://deckofcardsapi.com/static/img/2D.png",
+      "images": {
+        "svg": "https://deckofcardsapi.com/static/img/2D.svg",
+        "png": "https://deckofcardsapi.com/static/img/2D.png"
+      },
+      "value": "2",
+      "suit": "DIAMONDS"
+    }
+  ],
+  "remaining": 51
+}
