@@ -21,7 +21,7 @@ $(".filter-button").click(function () {
 //Update item count on filter reset
 $(".filter-reset-main").click(function () {
   setTimeout(function () {
-    var allElems = document.getElementsByClassName("company-item");
+    var allElems = document.getElementsByClassName("blog-item");
     var count = 0;
     for (var i = 0; i < allElems.length; i++) {
       var thisElem = allElems[i];
