@@ -179,34 +179,6 @@
   cursor: auto;
   pointer-events: none;
 }
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
-  text-transform: none !important;
-  letter-spacing: 0;
-  text-transform: none;
-  font-variant: initial;
-  line-height: 1;
-}
-.swiper-button-prev,
-.swiper-container-rtl .swiper-button-next {
-  left: 10px;
-  right: auto;
-}
-.swiper-button-prev:after,
-.swiper-container-rtl .swiper-button-next:after {
-  content: "prev";
-}
-.swiper-button-next,
-.swiper-container-rtl .swiper-button-prev {
-  right: 10px;
-  left: auto;
-}
-.swiper-button-next:after,
-.swiper-container-rtl .swiper-button-prev:after {
-  content: "next";
-}
 .swiper-button-prev.swiper-button-white,
 .swiper-button-next.swiper-button-white {
   --swiper-navigation-color: #ffffff;
