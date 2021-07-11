@@ -239,10 +239,10 @@
   border-radius: 50%;
   background: transparent;
   border: 0.1em solid #000000;
+  margin: 0 0.2em 0 0.2em;
 }
 button.swiper-pagination-bullet {
   border: none;
-  margin: 0 0.5em 0 0.5em;
   padding: 0;
   box-shadow: none;
   -webkit-appearance: none;
