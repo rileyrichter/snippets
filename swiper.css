@@ -18,7 +18,7 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: #000000;
 }
 .swiper-container {
   margin-left: auto;
@@ -189,7 +189,6 @@
     */
 }
 .swiper-pagination {
-  position: absolute;
   text-align: center;
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
@@ -234,16 +233,16 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 0.8em;
+  height: 0.8em;
   display: inline-block;
   border-radius: 50%;
-  background: #000;
-  opacity: 0.2;
+  background: transparent;
+  border: 0.1em solid #000000;
 }
 button.swiper-pagination-bullet {
   border: none;
-  margin: 0;
+  margin: 0 0.5em 0 0.5em;
   padding: 0;
   box-shadow: none;
   -webkit-appearance: none;
@@ -253,7 +252,7 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 .swiper-pagination-bullet-active {
-  opacity: 1;
+  border: 0.1em solid #000000;
   background: var(--swiper-pagination-color, var(--swiper-theme-color));
 }
 .swiper-container-vertical > .swiper-pagination-bullets {
