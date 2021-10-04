@@ -6,15 +6,20 @@
 const listing = document.getElementById("listing");
 
 $(document).ready(function () {
+  const handleError = (response) => {
+    if (!response.ok) {
+      throw Error(
+        `There was an error loading this data – status: ${response.status} ${response.statusText}`
+      );
+    } else {
+      return response.json();
+    }
+  }; //handler function that throws any encountered error
+
   fetch(
     "https://v1.nocodeapi.com/rileyrichter/airtable/oBStoMqdqFOwtxwb?tableName=Job%20Postings"
   )
-    .then((resp) => {
-      if (!resp.ok) {
-        throw new Error("Couldn't load job postings");
-      }
-      return resp.json();
-    })
+    .then(handleError) // skips to .catch if error is thrown
     .then((data) => {
       data.records.forEach((record) => {
         let posting = document.createElement("div");
@@ -58,5 +63,6 @@ $(document).ready(function () {
         applybutton.appendChild(link);
         applywrapper.appendChild(applybutton);
       });
-    });
+    })
+    .catch(console.log); // catches the error and logs it
 });
