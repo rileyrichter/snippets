@@ -8,9 +8,7 @@ const listing = document.getElementById("listing");
 $(document).ready(function () {
   const handleError = (response) => {
     if (!response.ok) {
-      throw Error(
-        `There was an error loading this data – status: ${response.status} ${response.statusText}`
-      );
+      throw Error(` ${response.status} ${response.statusText}`);
     } else {
       return response.json();
     }
@@ -64,5 +62,18 @@ $(document).ready(function () {
         applywrapper.appendChild(applybutton);
       });
     })
-    .catch(console.log); // catches the error and logs it
+    .catch(function writeError(err) {
+      let writeWrapper = document.createElement("div");
+      writeWrapper.style.textAlign = "center";
+      let writeLineOne = document.createElement("p");
+      writeLineOne.textContent = "Job listings could not be loaded";
+      let writeLineTwo = document.createElement("p");
+      writeLineTwo.textContent = err;
+      writeWrapper.appendChild(writeLineOne);
+      writeWrapper.appendChild(writeLineTwo);
+      listing.appendChild(writeWrapper);
+    })
+    .finally(() => {
+      document.getElementById("loading").remove();
+    }); // catches the error and logs it
 });
