@@ -3,8 +3,10 @@
 // The write-items.html file is the HTML structure this is based on. You can see the
 // live version on a Webflow site here: https://airtable-job-board.webflow.io/
 
+// Get our container with an ID of listing and set it as listing
 const listing = document.getElementById("listing");
 
+// On document ready, let's fetch some data
 $(document).ready(function () {
   const handleError = (response) => {
     if (!response.ok) {
@@ -63,6 +65,7 @@ $(document).ready(function () {
       });
     })
     .catch(function writeError(err) {
+      // catches the error and logs it
       let writeWrapper = document.createElement("div");
       writeWrapper.style.textAlign = "center";
       let writeLineOne = document.createElement("p");
@@ -74,6 +77,7 @@ $(document).ready(function () {
       listing.appendChild(writeWrapper);
     })
     .finally(() => {
+      // removes the loading element
       document.getElementById("loading").remove();
-    }); // catches the error and logs it
+    });
 });
