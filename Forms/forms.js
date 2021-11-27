@@ -19,6 +19,16 @@ $("#submitButtonId").click(function () {
   $("#lastNameResult").html(lastName);
 });
 
+// Pass form input values through to the success state of the form without jQuery
+let submitButton = document.getElementById("submitButtonId");
+submitButton.addEventListener("click", passSuccess);
+function passSuccess() {
+  let firstName = document.getElementById("firstNameField").value;
+  let lastName = document.getElementById("lastNamefield").value;
+  document.getElementById("firstNameResult").textContent = firstName;
+  document.getElementById("lastNameResult").textContent = lastName;
+}
+
 // Mask a phone number
 $(document).ready(function () {
   $("#phone").mask("999-999-9999", {
