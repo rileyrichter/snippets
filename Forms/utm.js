@@ -18,9 +18,7 @@ const queryForm = function (settings) {
   hiddenFields.forEach(function (field) {
     let name = field.name;
     let param = sessionStorage.getItem(name);
-    document.getElementById(name).value = param;
-    console.log(param);
-    // if (param) document.getElementsByName(name).value = param;
+    if (param) document.getElementById(name).value = param;
   });
 };
 setTimeout(function () {
