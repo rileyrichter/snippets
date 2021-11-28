@@ -4,17 +4,16 @@ const queryForm = function (settings) {
   let querystring = self.split("?");
   if (querystring.length > 1) {
     let pairs = querystring[1].split("&");
-    for (i in pairs) {
-      let keyval = pairs[i].split("=");
-      if (reset || sessionStorage.getItem(keyval[0]) === null) {
-        sessionStorage.setItem(keyval[0], decodeURIComponent(keyval[1]));
+    pairs.forEach(function (pairs) {
+      let keyval = pairs.split("=");
+      if (reset || sessionStorage.getItem(keyval) === null) {
+        sessionStorage.setItem(keyval, decodeURIComponent(keyval));
       }
-    }
+    });
   }
   let hiddenFields = document.querySelectorAll(
     "input[type=hidden], input[type=text]"
   );
-
   hiddenFields.forEach(function (field) {
     let name = field.name;
     let param = sessionStorage.getItem(name);
