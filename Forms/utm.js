@@ -3,7 +3,7 @@ const queryForm = function (settings) {
   let self = window.location.toString();
   let querystring = self.split("?");
   if (querystring.length > 1) {
-    let pairs = querystring[1].split("&");
+    let pairs = querystring.split("&");
     pairs.forEach(function (pairs) {
       let keyval = pairs.split("=");
       if (reset || sessionStorage.getItem(keyval) === null) {
